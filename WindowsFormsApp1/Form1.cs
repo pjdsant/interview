@@ -43,13 +43,47 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            timer1.Enabled = true;
         }
 
         private void Button3_Click(object sender, EventArgs e)
         {
             Form2 frm2 = new Form2();
             frm2.Show();
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            Button4_Click(null, null);
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            txtTelefone.Text = GetRandomTelNo();
+            txtPhone2.Text = GetRandomTelNo();
+            comboBox1.Text = "Motivo";
+            label3.Text = "";
+            label4.Text = "";
+        }
+
+        static Random rand = new Random();
+
+        static string GetRandomTelNo()
+        {
+            StringBuilder telNo = new StringBuilder(12);
+            int number;
+            for (int i = 0; i < 3; i++)
+            {
+                number = rand.Next(0, 8); // digit between 0 (incl) and 8 (excl)
+                telNo = telNo.Append(number.ToString());
+            }
+            telNo = telNo.Append("-");
+            number = rand.Next(0, 743); // number between 0 (incl) and 743 (excl)
+            telNo = telNo.Append(String.Format("{0:D3}", number));
+            telNo = telNo.Append("-");
+            number = rand.Next(0, 10000); // number between 0 (incl) and 10000 (excl)
+            telNo = telNo.Append(String.Format("{0:D4}", number));
+            return telNo.ToString();
         }
     }
 }

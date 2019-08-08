@@ -9,3 +9,14 @@ C:\Users\admin\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsF
 C:\Users\admin\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 C:\Users\admin\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\admin\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\repositorios\interview\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\repositorios\interview\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\repositorios\interview\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\repositorios\interview\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\repositorios\interview\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\repositorios\interview\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
+C:\repositorios\interview\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\repositorios\interview\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\repositorios\interview\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\repositorios\interview\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\repositorios\interview\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

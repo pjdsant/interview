@@ -28,6 +28,8 @@
     <button onclick="(new Load()).fcBtnLimpar();" id="btnLimpar">Limpar </button>
     <button onclick="(new Load()).fcBtnBuscar();" id="btnBuscar">Buscar 3o. Tel </button>
     <br><br>
+    <button onclick="(new Load()).fcBtnLimparForm();" id="btnLimparForm">Limpar Formulario </button>
+    <br><br>
 
     <p id="demo"></p>
 
@@ -80,6 +82,12 @@
           var telefone3 = activeX.GetText("Form2", 1);
           document.getElementById('textPhone3').value = telefone3;
 
+        }
+
+        this.fcBtnLimparForm = function(){
+          document.getElementById('textPhone1').value = "";
+          document.getElementById('textPhone2').value = "";
+          document.getElementById('textPhone3').value = "";
         }
 
     }
