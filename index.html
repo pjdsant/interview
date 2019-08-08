@@ -52,7 +52,7 @@
 
       this.fcStatus = function() {
           var x = document.getElementById("itemStatus").value;
-          document.getElementById("demo").innerHTML = "Você selecionou a opcao: " + x;
+          document.getElementById("demo").innerHTML = "Voce selecionou a opcao: " + x;
 
           switch(x) {
             case "CadastroOk":
@@ -68,7 +68,7 @@
         
         this.fcBtnEnter = function(){
           //var activeX = new ActiveXObject("LikeWater.WinHandlerControl");
-          activeX.SendClick("System Interact", 6 );
+          activeX.SendClick("System Interact", 6);
         }
         
         this.fcBtnLimpar = function(){
@@ -78,7 +78,7 @@
 
         this.fcBtnBuscar = function(){
           //var activeX = new ActiveXObject("LikeWater.WinHandlerControl");
-          activeX.SendClick("System Interact", 0 )
+          activeX.SendClick("System Interact", 0)
 
           var telefone3 = activeX.GetText("Form2", 1);
           document.getElementById('textPhone3').value = telefone3;
@@ -91,13 +91,13 @@
           document.getElementById('textPhone3').value = "";
         }
         
-        
-        var connection = new WebSocket('http://www.google.com');
+        /*
+        var connection = new WebSocket('ws');
 
         connection.onopen = function () {
           connection.send('Ping'); // Send the message 'Ping' to the server
         };
-
+        */
     }
   </script>
 

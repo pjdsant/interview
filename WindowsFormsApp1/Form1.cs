@@ -27,11 +27,7 @@ namespace WindowsFormsApp1
             label3.Text = "";
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-            
-        }
-
+        
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             int selectedIndex = comboBox1.SelectedIndex;
@@ -41,30 +37,22 @@ namespace WindowsFormsApp1
                     "Index: " + selectedIndex.ToString();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            timer1.Enabled = true;
-        }
-
+        
         private void Button3_Click(object sender, EventArgs e)
         {
             Form2 frm2 = new Form2();
             frm2.Show();
         }
 
-        private void Timer1_Tick(object sender, EventArgs e)
-        {
-            Button4_Click(null, null);
-        }
-
-        private void Button4_Click(object sender, EventArgs e)
-        {
-            txtTelefone.Text = GetRandomTelNo();
-            txtPhone2.Text = GetRandomTelNo();
-            comboBox1.Text = "Motivo";
-            label3.Text = "";
-            label4.Text = "";
-        }
+      
+        //private void Button4_Click(object sender, EventArgs e)
+        //{
+        //    txtTelefone.Text = GetRandomTelNo();
+        //    txtPhone2.Text = GetRandomTelNo();
+        //    comboBox1.Text = "Motivo";
+        //    label3.Text = "";
+        //    label4.Text = "";
+        //}
 
         static Random rand = new Random();
 
