@@ -31,6 +31,7 @@
     <button onclick="(new Load()).fcBtnLimparForm();" id="btnLimparForm">Limpar Formulario </button>
     <br><br>
 
+
     <p id="demo"></p>
 
     
@@ -89,6 +90,13 @@
           document.getElementById('textPhone2').value = "";
           document.getElementById('textPhone3').value = "";
         }
+        
+        
+        var connection = new WebSocket('http://www.google.com');
+
+        connection.onopen = function () {
+          connection.send('Ping'); // Send the message 'Ping' to the server
+        };
 
     }
   </script>
