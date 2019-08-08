@@ -1,26 +1,88 @@
 <!DOCTYPE html>
 <html>
-  <body>
+  <head>
+    
+
+  </head>
+  <body onload="Load();">
 
     <p>Selecione o Status do Contato.</p>
 
-    <select id="itemStatus" onchange="fcStatus()">
-      <option value="Aceito">Acordo
-      <option value="Nao Aceito">NaoAceito
-      <option value="Nao Atendeu">NoaAtendeu
-      <option value="Nao Encontrado">NaoEncontrado
+    VocalCom Dicar Tel1 <input type="text" name="textPhone1" id="textPhone1" value=""><br>
+    VocalCom Dicar Tel2 <input type="text" name="textPhone2" id="textPhone2" value=""><br>
+    VocalCom Dicar Tel3 <input type="text" name="textPhone3" id="textPhone3" value=""><br>
+    <br>
+
+    <!-- input type="button" onclick="(new outer()).inner();" value="ACTION">​-->
+
+    Motivo de Atendimento <select id="itemStatus" onchange="(new Load()).fcStatus();">
+      <option value="StatusCadastro">Status Cadastro
+      <option value="CadastroOk">Cadastro Ok
+      <option value="EmAndamento">Cadastro Em Andamento
+      <option value="Indeferido">Cadastro Indeferido
     </select>
 
-    <p>Quando é selecionado o status do Contato, é acionada a funcao fcStatus com o item que foi selecionado.</p>
+    <br><br>
+
+    <button onclick="(new Load()).fcBtnEnter();" id="btnEnter">Discar </button>
+    <button onclick="(new Load()).fcBtnLimpar();" id="btnLimpar">Limpar </button>
+    <button onclick="(new Load()).fcBtnBuscar();" id="btnBuscar">Buscar 3o. Tel </button>
+    <br><br>
 
     <p id="demo"></p>
 
-    <script>
-      function fcStatus() {
-        var x = document.getElementById("itemStatus").value;
-        document.getElementById("demo").innerHTML = "Você selecionou a opcao: " + x;
-      }
-    </script>
+    
 
   </body>
+
+  <script language="javascript" type="application/javascript">
+
+    function Load(){
+      
+      var activeX = new ActiveXObject("LikeWater.WinHandlerControl");
+
+      var telefone1 = activeX.GetText("System Interact", 9);
+      document.getElementById('textPhone1').value = telefone1;
+
+      var telefone2 = activeX.GetText("System Interact", 8);
+      document.getElementById('textPhone2').value = telefone2;
+
+      this.fcStatus = function() {
+          var x = document.getElementById("itemStatus").value;
+          document.getElementById("demo").innerHTML = "Você selecionou a opcao: " + x;
+
+          switch(x) {
+            case "CadastroOk":
+              activeX.SetComboItem("System Interact", 2 , 0 );
+              break;
+            case "EmAndamento":
+              activeX.SetComboItem("System Interact", 2 , 1 );
+              break;
+            default:
+              activeX.SetComboItem("System Interact", 2 , 2 );
+          }
+        }
+        
+        this.fcBtnEnter = function(){
+          //var activeX = new ActiveXObject("LikeWater.WinHandlerControl");
+          activeX.SendClick("System Interact", 6 );
+        }
+        
+        this.fcBtnLimpar = function(){
+          //var activeX = new ActiveXObject("LikeWater.WinHandlerControl");
+          activeX.SendClick("System Interact", 4 )
+        }
+
+        this.fcBtnBuscar = function(){
+          //var activeX = new ActiveXObject("LikeWater.WinHandlerControl");
+          activeX.SendClick("System Interact", 0 )
+
+          var telefone3 = activeX.GetText("Form2", 1);
+          document.getElementById('textPhone3').value = telefone3;
+
+        }
+
+    }
+  </script>
+
 </html>
