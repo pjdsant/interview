@@ -1,10 +1,26 @@
+<!DOCTYPE html>
 <html>
-    <head>
-    </head>
-    <body>
-        <h1>Sample Code</h1>
-        <script>
-            alert("testing Alert()");
-        </script>
-    </body>
+  <body>
+
+    <p>Selecione o Status do Contato.</p>
+
+    <select id="itemStatus" onchange="fcStatus()">
+      <option value="Aceito">Acordo
+      <option value="Nao Aceito">NaoAceito
+      <option value="Nao Atendeu">NoaAtendeu
+      <option value="Nao Encontrado">NaoEncontrado
+    </select>
+
+    <p>Quando é selecionado o status do Contato, é acionada a funcao fcStatus com o item que foi selecionado.</p>
+
+    <p id="demo"></p>
+
+    <script>
+      function fcStatus() {
+        var x = document.getElementById("itemStatus").value;
+        document.getElementById("demo").innerHTML = "Você selecionou a opcao: " + x;
+      }
+    </script>
+
+  </body>
 </html>
